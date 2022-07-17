@@ -1,0 +1,15 @@
+name: 'Command to File'
+description: 'Runs a command and outputs the output to a file.'
+inputs:
+  command:
+    description: 'The command to run.'
+    required: true
+  output:
+    description: 'The path where you want to put the output file.'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
+branding:
+  icon: 'activity'
+  color: 'blue'
