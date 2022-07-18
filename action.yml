@@ -3,7 +3,10 @@ description: 'Runs a command and outputs the output to a file.'
 inputs:
   command:
     description: 'The command to run.'
-    required: true
+    required: false
+  data:
+    description: 'The data to write to the file.'
+    required: false
   output:
     description: 'The path where you want to put the output file.'
     required: true
