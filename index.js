@@ -8,11 +8,11 @@ const settings = ["command", "data", "output"].reduce((obj, key) => {
 }, {});
 
 (async () => {
-	if (!command && !data) {
+	if (!settings.command && !settings.data) {
 		throw new Error("Either command or data is required as an input.");
 	}
 
-	const result = data || await exec(settings.command);
+	const result = settings.data || await exec(settings.command);
 	await fs.writeFile(settings.output, result);
 })();
 
